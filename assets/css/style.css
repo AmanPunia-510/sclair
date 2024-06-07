@@ -30,6 +30,10 @@
   margin-top: 35px;
 }
 
+.mt-60 {
+  margin-top: 60px;
+}
+
 /* ======================================================== PADDING ========================================================== */
 
 .pt-100 {
@@ -542,37 +546,85 @@
   pointer-events: none;
 }
 
+/* ======================================================== TIMELINE ============================================================ */
+
+.container_stock {
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+
+.phase-content {
+  max-width: 300px;
+  min-height: 328px;
+  padding: 24px 92px 24px 24px;
+  border-radius: 16px;
+  border: 1px solid yellow;
+  background: #ffffff14;
+}
+
+.mt-media-first-col {
+  margin-top: 184px;
+}
+
+.mt-media-second-col {
+  margin-top: 78px;
+}
+
+.bg-pos-img-stock {
+  position: absolute;
+  min-height: 642px;
+  bottom: 0;
+  left: 0;
+}
+
+.roadmap-h {
+  padding-top: 63px;
+  padding-bottom: 100px;
+}
+
+.list-style {
+  list-style: disc !important;
+}
+
+.ul-list {
+  margin-left: 16px;
+}
+
 /* ======================================================== ACCORDIAN ============================================================ */
 
-.acc-numb {
-  padding: 16px;
-  position: relative;
-  border-radius: 8px;
-  background: var(--service-common-svg);
+.section7 {
+  background-image: url("../images/png/accordian-bg.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  padding-top: 180px;
+  padding-bottom: 180px;
 }
 
-.acc-numb::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  padding: 1px;
-  width: 100%;
-  height: 100%;
-  border-radius: 8px;
-  background: var(--service-after);
-  -webkit-mask: linear-gradient(var(--white-color) 0 0) content-box,
-    linear-gradient(var(--white-color) 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  pointer-events: none;
-}
-
-.accordian-txt {
-  padding: 24px 40px;
+.max-w-800 {
+  max-width: 800px;
 }
 
 .accordian-box {
-  border-bottom: 1px solid #262626;
+  border-radius: 8px;
+  border: 1px solid #ffffff3d;
+  background-color: #ffffff14;
+}
+
+.accordian-txt-or-svg {
+  padding: 12px;
+}
+
+.accordian-p {
+  padding: 0 12px;
+  padding-bottom: 12px;
+}
+
+.acc-svg1 {
+  transform: rotate(180deg);
 }
 
 /* ======================================================== MIN-WIDTH :992 ========================================================== */

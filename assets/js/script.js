@@ -35,37 +35,7 @@ menu.addEventListener("click", () => {
   }
 });
 
-// accrodian
-
-let accordian_items = document.querySelectorAll(".accordian-box");
-
-accordian_items.forEach((items) => {
-  let paragraph = items.querySelector(".accordian-p");
-  let heading = items.querySelector(".accordian-txt-or-svg");
-  let svg = items.querySelector(".accordian-svg");
-
-  heading.style.cursor = "pointer";
-  heading.addEventListener("click", () => {
-    accordian_items.forEach((other) => {
-      if (other !== items) {
-        let paragraph = other.querySelector(".accordian-p");
-        let svg = other.querySelector(".accordian-svg");
-        paragraph.classList.add("d-none");
-        svg.style.transform = "rotate(180deg)";
-      }
-    });
-
-    if (paragraph.classList.contains("d-none")) {
-      paragraph.classList.remove("d-none");
-      paragraph.classList.add("d-block");
-      svg.style.transform = "rotate(0deg)";
-    } else {
-      paragraph.classList.remove("d-block");
-      paragraph.classList.add("d-none");
-      svg.style.transform = "rotate(180deg)";
-    }
-  });
-});
+// ===================================== RANGe ========================================//
 
 var slider = document.getElementById("range-slider__range");
 var output = document.getElementById("range-slider__value");
@@ -86,46 +56,51 @@ slider.oninput = function () {
     "%, #d7dcdf 100%)";
 };
 
-// function startTimer(duration, display) {
-//   var timer = duration,
-//     days,
-//     hours,
-//     minutes,
-//     seconds;
+// ==================================== ACCORDIAN =======================================//
 
-//   setInterval(function () {
-//     days = Math.floor(timer / (24 * 60 * 60)); // Calculate days
-//     hours = Math.floor((timer % (24 * 60 * 60)) / 3600); // Calculate hours
-//     minutes = Math.floor((timer % 3600) / 60); // Calculate minutes
-//     seconds = timer % 60; // Calculate seconds
+let accordian_items = document.querySelectorAll(".accordian-box");
 
-//     days = days < 10 ? "0" + days : days;
-//     hours = hours < 10 ? "0" + hours : hours;
-//     minutes = minutes < 10 ? "0" + minutes : minutes;
-//     seconds = seconds < 10 ? "0" + seconds : seconds;
+accordian_items.forEach((items) => {
+  let paragraph = items.querySelector(".accordian-p");
+  let heading = items.querySelector(".accordian-txt-or-svg");
+  let svg = items.querySelector(".accordian-svg");
+  let accord_svg = document.querySelector(".acc-svg1");
 
-//     display.textContent = days + ":" + hours + ":" + minutes + ":" + seconds;
+  heading.style.cursor = "pointer";
+  heading.addEventListener("click", () => {
+    accordian_items.forEach((other) => {
+      if (other !== items) {
+        let paragraph = other.querySelector(".accordian-p");
+        let svg = other.querySelector(".accordian-svg");
+        paragraph.classList.add("d-none");
+        svg.style.transform = "rotate(0deg)";
+      }
+    });
 
-//     if (--timer < 0) {
-//       timer = duration;
-//     }
-//   }, 1000);
-// }
-
-// window.onload = function () {
-//   var startTime = 12 * 60 * 60 + 46 * 60 + 19; // 12 hours, 46 minutes, 19 seconds
-//   var display = document.getElementById("timer");
-//   startTimer(startTime, display);
-// };
-
-  document.querySelector(".copy-btn").addEventListener("click", function () {
-    var copyText = document.querySelector(".copy-txt").textContent;
-    var tempInput = document.createElement("input");
-    tempInput.value = copyText;
-    document.body.appendChild(tempInput);
-    tempInput.select();
-    document.execCommand("copy");
-    document.body.removeChild(tempInput);
-
-    alert("Text copied to clipboard: " + copyText);
+    if (paragraph.classList.contains("d-none")) {
+      paragraph.classList.remove("d-none");
+      paragraph.classList.add("d-block");
+      svg.style.transform = "rotate(180deg)";
+      accord_svg.style.transform = "rotate(0deg)";
+    } else {
+      paragraph.classList.remove("d-block");
+      paragraph.classList.add("d-none");
+      svg.style.transform = "rotate(0deg)";
+      // accord_svg.style.transform = "rotate(0deg)";
+    }
   });
+});
+
+// ===================================== COPY_BTN ========================================//
+
+document.querySelector(".copy-btn").addEventListener("click", function () {
+  var copyText = document.querySelector(".copy-txt").textContent;
+  var tempInput = document.createElement("input");
+  tempInput.value = copyText;
+  document.body.appendChild(tempInput);
+  tempInput.select();
+  document.execCommand("copy");
+  document.body.removeChild(tempInput);
+
+  alert("Text copied to clipboard: " + copyText);
+});
