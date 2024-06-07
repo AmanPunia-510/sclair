@@ -46,7 +46,7 @@
   gap: 10px;
 }
 
-.gap-12{
+.gap-12 {
   gap: 12px;
 }
 
@@ -86,6 +86,10 @@
   height: 48px;
   overflow: hidden;
   transition-duration: 0.5s;
+}
+
+.max-w-900 {
+  max-width: 900px;
 }
 
 /* ======================================================== HEADER ========================================================== */
@@ -439,8 +443,103 @@
   margin-left: 8px;
 }
 
-.token-img{
+.token-img {
   max-width: 491px;
+}
+
+.sinclair-card {
+  padding: 32px 75px;
+  background: #ffffff0f;
+  border-radius: 16px;
+  margin-top: 60px;
+}
+
+.sinclair-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  background: linear-gradient(
+    96.24deg,
+    rgba(241, 241, 241, 0.24) -31.57%,
+    rgba(241, 241, 241, 0) 125.48%
+  );
+  -webkit-mask: linear-gradient(var(--white-color) 0 0) content-box,
+    linear-gradient(var(--white-color) 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.sinclair-img {
+  max-width: 336px;
+}
+
+.sinclair-txt {
+  max-width: 574px;
+}
+
+/* ======================================================== TOKENMICS ============================================================ */
+
+.section5 {
+  background-image: url("../images/png/audit.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  padding-top: 179px;
+  padding-bottom: 160px;
+}
+
+.secure-img {
+  max-width: 244px;
+}
+
+.audit-btn {
+  max-width: 91px;
+}
+
+.secure-txt {
+  max-width: 475px;
+}
+
+.border-botm {
+  height: 1px;
+  background-color: #fff624;
+  margin-top: 83px;
+}
+
+.major-txt {
+  max-width: 475px;
+}
+
+.major-slider {
+  max-width: 380px;
+  padding: 40px 15px;
+  background-color: #ffffff14;
+  border-radius: 16px;
+}
+
+.major-slider::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  background: linear-gradient(
+    150.17deg,
+    rgba(255, 246, 36, 0.4) -60.4%,
+    rgba(255, 246, 36, 0) 118.96%
+  );
+  -webkit-mask: linear-gradient(var(--white-color) 0 0) content-box,
+    linear-gradient(var(--white-color) 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
 }
 
 /* ======================================================== ACCORDIAN ============================================================ */
