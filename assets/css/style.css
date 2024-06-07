@@ -628,6 +628,52 @@
   transform: rotate(180deg);
 }
 
+/* ======================================================== SOCIAL CARD ============================================================= */
+
+.max-w-840 {
+  max-width: 840px;
+}
+
+.social-card {
+  background-image: url("../images/png/social-card.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  padding: 50px 40px;
+}
+
+.social-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  background: linear-gradient(
+    107.74deg,
+    rgba(255, 246, 36, 0.27) -16.6%,
+    rgba(255, 246, 36, 0) 134.64%
+  );
+  -webkit-mask: linear-gradient(var(--white-color) 0 0) content-box,
+    linear-gradient(var(--white-color) 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.social_space{
+  margin-top: 124px;
+  margin-bottom: 154px;
+}
+
+.common-icon{
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid #595959;
+}
+
 /* ======================================================== MIN-WIDTH :992 ========================================================== */
 
 @media (min-width: 992px) {
