@@ -22,7 +22,7 @@
 
 <body class="bg-black">
 
-    <header class="header w-100 min-vh-100 d-flex flex-column">
+    <header class="header w-100 min-vh-100 d-flex flex-column position-relative">
         <nav class="nav position-fixed w-100 bg-1a">
             <div class="my-container">
                 <div class="navbar d-flex align-items-center justify-content-between">
@@ -80,11 +80,14 @@
             <img src="./assets/images/png/header-position.png" alt="header position"
                 class="header-position mx-auto w-100">
         </div>
+        <a href="#sold">
+            <img src="./assets/images/png/btn-position.png" alt="btn-position" class="btn-position position-absolute">
+        </a>
     </header>
 
     <main>
         <!--===================================================== SOLD SEC-1 ======================================================-->
-        <section class="section1 sold-section w-100 mx-auto mt-5 position-relative">
+        <section class="section1 sold-section w-100 mx-auto mt-5 position-relative" id="sold">
             <div class="my-container">
                 <div class="row">
                     <div class="col-5">
@@ -130,12 +133,12 @@
                                 </div>
                                 <div class="token-txt2 position-relative">
                                     <div class="ff-manr fw-400 fs-md lh-150 color-c1">Tokens Remaining</div>
-                                    <div class="fw-400 fs-md lh-150 ff-manr color-24 mt-1">80,212,738</div>
+                                    <div class="fw-400 fs-md lh-150 ff-manr color-c1 mt-1">80,212,738</div>
                                 </div>
                             </div>
                             <div class="mt-3">
-                                <input id="range-slider__range" type="range" value="0" min="0" max="100">
-                                <span id="range-slider__value" class="d-none"></span>
+                                <input id="range-slider__range" type="range" min="0" max="100" value="50">
+                                <span id="range-slider__value" class="d-none">50</span>
                             </div>
                             <p class="token-p ff-manr fw-400 fs-sm lh-150 color-a9 mt-6">Purchase $Clair fast until the
                                 price increase.</p>
@@ -219,7 +222,7 @@
         </section>
 
         <!--===================================================== ADDRESS SEC-3 ====================================================-->
-        <section class="section3 w-100">
+        <section class="section3 w-100 position-relative">
             <div class="my-container">
                 <div class="adress-section mx-auto position-relative">
                     <h2 class="about-h ff-manr fw-600 fs-12xl lh-150 color-f1 text-center mx-auto"><span
@@ -249,11 +252,14 @@
                         next millionaire.</p>
                 </div>
             </div>
+            <img src="./assets/images/png/layer-top.png" alt="layer top" class="layer-top position-absolute w-100">
+            <img src="./assets/images/png/layer-bottom.png" alt="layer top"
+                class="layer-bottom position-absolute w-100">
         </section>
 
         <!--===================================================== TOKENMICS SEC-4 ===================================================-->
-        <section class="section4">
-            <div class="my-container">
+        <section class="section4 position-relative">
+            <div class="my-container position-relative z-2">
                 <div class="row align-items-center">
                     <div class="col-6">
                         <div class="tokenmics-content">
@@ -336,6 +342,9 @@
                     </div>
                 </div>
             </div>
+            <img src="./assets/images/png/sec4-top.png" alt="sec4-top" class="sec4-top position-absolute w-100 z-1">
+            <img src="./assets/images/png/sec4-bottom.png" alt="sec4-bottom"
+                class="sec4-bottom position-absolute w-100 z-1">
         </section>
 
         <!--===================================================== AUDIT SEC-5 =======================================================-->
@@ -378,6 +387,11 @@
                     <div class="col-6 d-flex justify-content-end">
                         <div class="major-slider position-relative">
                             <img src="./assets/images/png/slider.png" alt="slider png" class="w-100">
+                            <div class="d-flex align-items-center gap-32 mt-4">
+                                <div class="border-btm-m1 w-100"></div>
+                                <div class="border-btm-m2 w-100"></div>
+                                <div class="border-btm-m2 w-100"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -385,15 +399,15 @@
         </section>
 
         <!--================================================== TIMELINE SEC-6 =====================================================-->
-        <section class="section8 position-relative min-vh-100">
-            <!-- <div class="bg-pos-img-stock w-100">
+        <section class="section6 position-relative">
+            <div class="bg-pos-img-stock w-100 z-2">
                 <img src="./assets/images/png/timeline.png" alt="random image" class="w-100">
-            </div> -->
+            </div>
             <div class="container_stock">
-                <h2 class="roadmap-h fw-600 fs-12xl lh-150 ff-manr color-f1 mx-auto text-center">Roadmap</h2>
-                <div class="row">
-                    <div class="col-4 mt-media-first-col">
-                        <div class="phase-content">
+                <h2 class="roadmap-h fw-600 fs-12xl lh-150 ff-manr color-f1 mx-auto text-center position-relative z-2">Roadmap</h2>
+                <div class="row position-relative z-2">
+                    <div class="col-4 mt-media-first-col position-relative z-1">
+                        <div class="phase-content position-relative">
                             <h2 class="fw-500 fs-6xl lh-150 white-color ff-manr">Phase 1</h2>
                             <div class="d-flex align-items-start flex-column justify-content-center">
                                 <ul class="ul-list mt-3">
@@ -413,10 +427,11 @@
                                         Release</li>
                                 </ul>
                             </div>
+                            <img src="./assets/images/png/phase-cntn.png" alt="phase-content" class="phase-cnt position-absolute">
                         </div>
                     </div>
-                    <div class="col-4 mt-media-second-col">
-                        <div class="phase-content">
+                    <div class="col-4 mt-media-second-col position-relative z-1">
+                        <div class="phase-content position-relative">
                             <h2 class="fw-500 fs-6xl lh-150 white-color ff-manr">Phase 2</h2>
                             <div class="d-flex align-items-start flex-column justify-content-center">
                                 <ul class="ul-list mt-3">
@@ -436,10 +451,11 @@
                                         Release</li>
                                 </ul>
                             </div>
+                            <img src="./assets/images/png/phase-cntn.png" alt="phase-content" class="phase-cnt position-absolute">
                         </div>
                     </div>
-                    <div class="col-4">
-                        <div class="phase-content">
+                    <div class="col-4 position-relative z-1">
+                        <div class="phase-content position-relative">
                             <h2 class="fw-500 fs-6xl lh-150 white-color ff-manr">Phase 3</h2>
                             <div class="d-flex align-items-start flex-column justify-content-center">
                                 <ul class="ul-list mt-3">
@@ -459,10 +475,14 @@
                                         Release</li>
                                 </ul>
                             </div>
+
+                            <img src="./assets/images/png/phase-cntn.png" alt="phase-content" class="phase-cnt position-absolute">
                         </div>
                     </div>
                 </div>
             </div>
+            <img src="./assets/images/png/timeline-top.png" alt="timeline top" class="timeline-top w-100 position-absolute">
+            <img src="./assets/images/png/timeline-bottom.png" alt="timeline bottom" class="timeline-bottom w-100 position-absolute">
         </section>
 
         <!--================================================== ACCORDIAN SEC-7 =====================================================-->
@@ -580,8 +600,8 @@
             </div>
         </section>
 
-        <!--================================================== ACCORDIAN SEC-8 =====================================================-->
-        <section class="section8">
+        <!--================================================== SOCIAL SEC-8 =====================================================-->
+        <section class="section8 overflow-hidden">
             <div class="my-container max-w-840">
                 <div class="social-card social_space position-relative">
                     <h2
@@ -657,7 +677,8 @@
                         Paper</a></li>
                 <li class="footer-list"><a href="#white" class="ff-manr fw-500 fs-md lh-150 color-d9">Privacy</a></li>
                 <li class="footer-list"><a href="#white" class="ff-manr fw-500 fs-md lh-150 color-d9">Cookies</a></li>
-                <li class="footer-list"><a href="#white" class="ff-manr fw-500 fs-md lh-150 color-d9">Disclaimer</a></li>
+                <li class="footer-list"><a href="#white" class="ff-manr fw-500 fs-md lh-150 color-d9">Disclaimer</a>
+                </li>
             </ul>
             <div class="w-100 pb-3"></div>
         </div>
