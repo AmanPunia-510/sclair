@@ -104,8 +104,7 @@ slider.oninput = function () {
 //     minutes = minutes < 10 ? "0" + minutes : minutes;
 //     seconds = seconds < 10 ? "0" + seconds : seconds;
 
-//     display.textContent =
-//       days + ":" + hours + ":" + minutes + ":" + seconds;
+//     display.textContent = days + ":" + hours + ":" + minutes + ":" + seconds;
 
 //     if (--timer < 0) {
 //       timer = duration;
@@ -119,3 +118,14 @@ slider.oninput = function () {
 //   startTimer(startTime, display);
 // };
 
+  document.querySelector(".copy-btn").addEventListener("click", function () {
+    var copyText = document.querySelector(".copy-txt").textContent;
+    var tempInput = document.createElement("input");
+    tempInput.value = copyText;
+    document.body.appendChild(tempInput);
+    tempInput.select();
+    document.execCommand("copy");
+    document.body.removeChild(tempInput);
+
+    alert("Text copied to clipboard: " + copyText);
+  });

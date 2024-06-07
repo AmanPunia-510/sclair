@@ -14,6 +14,10 @@
   margin-top: 10px;
 }
 
+.mt-12 {
+  margin-top: 12px;
+}
+
 .mt-14 {
   margin-top: 14px;
 }
@@ -28,6 +32,10 @@
 
 /* ======================================================== PADDING ========================================================== */
 
+.pt-100 {
+  padding-top: 100px;
+}
+
 .pt-150 {
   padding-top: 150px;
 }
@@ -36,6 +44,10 @@
 
 .gap-10 {
   gap: 10px;
+}
+
+.gap-12{
+  gap: 12px;
 }
 
 .gap-14 {
@@ -72,6 +84,8 @@
   text-align: center;
   color: var(--color-01);
   height: 48px;
+  overflow: hidden;
+  transition-duration: 0.5s;
 }
 
 /* ======================================================== HEADER ========================================================== */
@@ -123,7 +137,7 @@
   border-radius: 20px;
   background-image: url("../images/png/sold-section-bg.png");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% 100%;
   background-position: center;
   backdrop-filter: blur(10px);
   background-color: #ffffff05;
@@ -178,11 +192,11 @@
 }
 
 .common-svg-ammount {
-  padding: 12px;
   gap: 0px;
   border-radius: 5px;
   background: #313131;
-  width: fit-content;
+  width: 53px;
+  height: 53px;
 }
 
 .buy-btn {
@@ -291,37 +305,142 @@
   border-radius: 50%;
   background-color: #87855b;
 }
-/* ======================================================== SLIDER ========================================================== */
 
-.common-slider {
-  padding: 20px;
-  border-radius: 8px;
-  background: var(--common-slider);
+/* ======================================================== ABOUT ========================================================== */
+
+.about-section {
+  max-width: 856px;
+  min-height: 330px;
 }
 
-.slider-p span {
-  background: var(--slider-p);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+.about-p {
+  max-width: 776px;
 }
 
-.slick-slide {
-  margin: 0 58px;
+.learn-btn {
+  max-width: 135px;
 }
 
-.slick-list {
-  margin: 0 -58px;
+.dino-img {
+  right: 0;
+  top: 0;
+  height: 100%;
 }
 
-.slick-track {
-  display: flex;
+/* ======================================================== ADDRESS ========================================================== */
+
+.section3 {
+  background-image: url("../images/png/adress-img.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  padding-top: 152px;
+  padding-bottom: 152px;
+  margin-top: 54px;
 }
-.slick-track .slick-slide {
-  display: flex;
-  height: auto;
-  align-items: center;
-  justify-content: center;
+
+.adress-section {
+  max-width: 856px;
+}
+
+.copy-btn-box {
+  border: 1px solid #ffffff3d;
+  background: #ffffff14;
+  border-radius: 10px;
+  max-width: 587px;
+}
+
+.copy-btn {
+  max-width: 89px;
+}
+
+.copy-btn {
+  overflow: hidden;
+  transition-duration: 700ms;
+}
+
+.copy-btn span:first-child {
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.copy-btn span:last-child {
+  position: absolute;
+  opacity: 0;
+  transform: translateY(100%) translateX(-50%);
+  height: 14px;
+  line-height: 13px;
+}
+
+.copy-btn:focus {
+  background-color: var(--color-24);
+  transition-delay: 100ms;
+  transition-duration: 500ms;
+}
+
+.copy-btn:focus span:first-child {
+  transform: translateX(-50%) translateY(-150%);
+  opacity: 0;
+  transition-duration: 500ms;
+}
+
+.copy-btn:focus span:last-child {
+  transform: translateX(-50%) translateY(-50%);
+  opacity: 1;
+  transition-delay: 300ms;
+  transition-duration: 500ms;
+}
+
+.copy-btn:focus:end {
+  transition-duration: 900ms;
+}
+
+.copy-txt {
+  padding: 12px;
+}
+
+.common-btn:hover {
+  background-color: var(--white-color);
+}
+
+.common-btn:hover {
+  box-shadow: 0px 0px 5px rgb(184, 236, 104), 0px 0px 10px rgb(184, 236, 104),
+    0px 0px 30px rgb(184, 236, 104);
+  transition-duration: 0.7s;
+}
+
+.common-btn:hover .text {
+  color: rgb(65, 64, 64);
+}
+
+.common-btn:hover .svgIcon path {
+  fill: rgb(65, 64, 64);
+}
+
+/* ======================================================== TOKENMICS ======================================================= */
+.section4 {
+  background-image: url("../images/png/tokenmics.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  padding-top: 124px;
+  padding-bottom: 98px;
+}
+
+.tokenmics-content {
+  max-width: 343px;
+}
+
+.sinclair span {
+  padding: 4px 16px;
+  border: 1px solid #fff6243d;
+  background: #ffffff0a;
+  border-radius: 6px;
+  margin-left: 8px;
+}
+
+.token-img{
+  max-width: 491px;
 }
 
 /* ======================================================== ACCORDIAN ============================================================ */
