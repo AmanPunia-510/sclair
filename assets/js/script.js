@@ -50,6 +50,7 @@ accordian_items.forEach((items) => {
   let heading = items.querySelector(".accordian-txt-or-svg");
   let svg = items.querySelector(".accordian-svg");
   let accord_svg = document.querySelector(".acc-svg1");
+  const head = items.querySelector(".accordian-h");
 
   heading.style.cursor = "pointer";
   heading.addEventListener("click", () => {
@@ -57,8 +58,11 @@ accordian_items.forEach((items) => {
       if (other !== items) {
         let paragraph = other.querySelector(".accordian-p");
         let svg = other.querySelector(".accordian-svg");
+        const head = other.querySelector(".accordian-h");
+
         paragraph.classList.add("d-none");
         svg.style.transform = "rotate(0deg)";
+        head.style.color = "#A9A9A9";
       }
     });
 
@@ -67,10 +71,13 @@ accordian_items.forEach((items) => {
       paragraph.classList.add("d-block");
       svg.style.transform = "rotate(180deg)";
       accord_svg.style.transform = "rotate(0deg)";
+      head.style.color = "white";
     } else {
       paragraph.classList.remove("d-block");
       paragraph.classList.add("d-none");
       svg.style.transform = "rotate(0deg)";
+      head.style.color = "#A9A9A9";
+
       // accord_svg.style.transform = "rotate(0deg)";
     }
   });
