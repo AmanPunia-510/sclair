@@ -344,7 +344,7 @@
 }
 
 .copy-btn {
-  max-width: 89px;
+  max-width: 111px;
 }
 
 .copy-btn {
@@ -1040,5 +1040,30 @@
   .section4 {
     padding-top: 18px;
     padding-bottom: 31px;
+  }
+
+  .footer {
+    padding-top: 55px;
+  }
+
+  .social_space {
+    margin-top: 45px;
+  }
+
+  .accordian {
+    margin-top: 32px;
+  }
+
+  .roadmap-h {
+    padding-top: 0px;
+    padding-bottom: 24px;
+  }
+
+  .border-botm {
+    margin-top: 30px;
+  }
+
+  .header{
+    min-height: 50vh !important;
   }
 }
