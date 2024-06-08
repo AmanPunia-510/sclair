@@ -95,7 +95,7 @@
   overflow: hidden;
   transition-duration: 0.5s;
   position: relative;
-  z-index: 3;
+  z-index: 7;
 }
 
 .max-w-900 {
