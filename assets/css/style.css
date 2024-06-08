@@ -848,14 +848,15 @@
   bottom: -201px;
 }
 
-.accordian-right{
+.accordian-right {
   right: 0;
   bottom: -40px;
 }
 
-.footer-left{
+.footer-left {
   left: 0;
-  top: 0;
+  top: -229px;
+  z-index: 1;
 }
 
 /* ======================================================== MIN-WIDTH :992 ========================================================== */
