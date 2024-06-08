@@ -124,8 +124,8 @@
   top: 0;
   padding: 26px 0px;
   z-index: 5;
-  background: #f1f1f105;
-  border-bottom: 1px solid #f1f1f129;
+  background-color: var(--nav-bg);
+  border-bottom: 1px solid var(--nav-brdr);
   backdrop-filter: blur(12px);
 }
 
@@ -563,17 +563,17 @@
 }
 
 .border-btm-m1 {
-  border: 1px solid #53511B;
+  border: 1px solid #53511b;
   width: 45%;
 }
 
 .border-btm-m2 {
-  border: 1px solid #53511B;
+  border: 1px solid #53511b;
   width: 20%;
 }
 
 .border-btm-m3 {
-  border: 1px solid #53511B;
+  border: 1px solid #53511b;
   width: 45%;
 }
 
@@ -808,6 +808,29 @@
 .footer-list a:hover {
   color: var(--white-color);
   -webkit-text-stroke: medium;
+}
+
+/* ============================================================= ELLIPS ============================================================= */
+
+.header-left {
+  bottom: 0;
+  left: 0;
+}
+
+.sec1-right {
+  right: 0;
+  top: 0;
+}
+
+.sec3-left {
+  left: 0;
+  bottom: 0;
+}
+
+.token-right {
+  right: 0;
+  bottom: -160px;
+  z-index: 1;
 }
 
 /* ======================================================== MIN-WIDTH :992 ========================================================== */
@@ -1063,7 +1086,7 @@
     margin-top: 30px;
   }
 
-  .header{
+  .header {
     min-height: 50vh !important;
   }
 }
