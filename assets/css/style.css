@@ -563,18 +563,18 @@
 }
 
 .border-btm-m1 {
-  border: 1px solid #fff624;
-  max-width: 186px;
+  border: 1px solid #53511B;
+  width: 45%;
 }
 
 .border-btm-m2 {
-  border: 1px solid #fff624;
-  max-width: 57px;
+  border: 1px solid #53511B;
+  width: 20%;
 }
 
 .border-btm-m3 {
-  border: 1px solid #fff624;
-  max-width: 186px;
+  border: 1px solid #53511B;
+  width: 45%;
 }
 
 /* ======================================================== TIMELINE ============================================================ */
