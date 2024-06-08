@@ -22,6 +22,41 @@
 </head>
 
 <body class="bg-black">
+    <!--===================================================== PRELOADER ======================================================-->
+
+    <section class="position-fixed top-0 start-0 preloader">
+        <div class="loading">
+            <svg class="ip" viewBox="0 0 256 128" width="256px" height="128px" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <linearGradient id="grad1" x1="0" y1="0" x2="1" y2="0">
+                        <stop offset="0%" stop-color="#5ebd3e" />
+                        <stop offset="33%" stop-color="#ffb900" />
+                        <stop offset="67%" stop-color="#f78200" />
+                        <stop offset="100%" stop-color="#e23838" />
+                    </linearGradient>
+                    <linearGradient id="grad2" x1="1" y1="0" x2="0" y2="0">
+                        <stop offset="0%" stop-color="#e23838" />
+                        <stop offset="33%" stop-color="#973999" />
+                        <stop offset="67%" stop-color="#009cdf" />
+                        <stop offset="100%" stop-color="#5ebd3e" />
+                    </linearGradient>
+                </defs>
+                <g fill="none" stroke-linecap="round" stroke-width="16">
+                    <g class="ip__track" stroke="#ddd">
+                        <path d="M8,64s0-56,60-56,60,112,120,112,60-56,60-56" />
+                        <path d="M248,64s0-56-60-56-60,112-120,112S8,64,8,64" />
+                    </g>
+                    <g stroke-dasharray="180 656">
+                        <path class="ip__worm1" stroke="url(#grad1)" stroke-dashoffset="0"
+                            d="M8,64s0-56,60-56,60,112,120,112,60-56,60-56" />
+                        <path class="ip__worm2" stroke="url(#grad2)" stroke-dashoffset="358"
+                            d="M248,64s0-56-60-56-60,112-120,112S8,64,8,64" />
+                    </g>
+                </g>
+            </svg>
+        </div>
+        <p class="ff-manr fw-700 fs-12xl lh-150 black-color m-0 pt-4">SCLAIR</p>
+    </section>
 
     <header class="header w-100 min-vh-100 d-flex flex-column position-relative">
         <nav class="nav position-fixed w-100 bg-1a">
@@ -173,7 +208,8 @@
                                     <div class="main-timer d-flex align-items-center gap-2">
                                         <div class="timer1">
                                             <div class="fw-400 fs-sm lh-150 ff-manr color-a9 text-center">Days</div>
-                                            <div class="time-box fw-400 fs-3xl lh-150 ff-manr color-f1 mt-two">00</div>
+                                            <div class="time-box fw-400 fs-3xl lh-150 ff-manr color-f1 mt-two"
+                                                id="days">00</div>
                                         </div>
                                         <span class="d-flex flex-column gap-2 mt-4">
                                             <span class="dot"></span>
@@ -181,7 +217,8 @@
                                         </span>
                                         <div class="timer2">
                                             <div class="fw-400 fs-sm lh-150 ff-manr color-a9 text-center">Hours</div>
-                                            <div class="time-box fw-400 fs-3xl lh-150 ff-manr color-f1 mt-two">12</div>
+                                            <div class="time-box fw-400 fs-3xl lh-150 ff-manr color-f1 mt-two"
+                                                id="hours">12</div>
                                         </div>
                                         <span class="d-flex flex-column gap-2 mt-4">
                                             <span class="dot"></span>
@@ -189,7 +226,8 @@
                                         </span>
                                         <div class="timer3">
                                             <div class="fw-400 fs-sm lh-150 ff-manr color-a9 text-center">Mins</div>
-                                            <div class="time-box fw-400 fs-3xl lh-150 ff-manr color-f1 mt-two">46</div>
+                                            <div class="time-box fw-400 fs-3xl lh-150 ff-manr color-f1 mt-two"
+                                                id="mins">46</div>
                                         </div>
                                         <span class="d-flex flex-column gap-2 mt-4">
                                             <span class="dot"></span>
@@ -197,8 +235,11 @@
                                         </span>
                                         <div class="timer4">
                                             <div class="fw-400 fs-sm lh-150 ff-manr color-a9 text-center">Secs</div>
-                                            <div class="time-box fw-400 fs-3xl lh-150 ff-manr color-f1 mt-two">19</div>
+                                            <div class="time-box fw-400 fs-3xl lh-150 ff-manr color-f1 mt-two"
+                                                id="secs">19</div>
                                         </div>
+
+                                        <div id="combined-time"></div>
                                     </div>
                                 </div>
                             </div>
@@ -413,7 +454,16 @@
 
                     <div class="col-md-6 col-12 d-flex justify-content-center justify-content-md-end">
                         <div class="major-slider position-relative">
-                            <img src="./assets/images/png/slider.png" alt="slider png" class="w-100">
+
+                            <div class="my-slider overflow-hidden w-100">
+                                <img class=" w-100 max-w-267 " src="./assets/images/png/slider-item1.png"
+                                    alt="slider-item1">
+                                <img class=" w-100 max-w-267 " src="./assets/images/png/slider-item2.webp"
+                                    alt="slider-item2">
+                                <img class=" w-100 max-w-267 " src="./assets/images/png/slider-item3.webp"
+                                    alt="slider-item3">
+                            </div>
+
                             <div class="d-flex align-items-center gap-32 mt-4">
                                 <div class="border-btm-m1 w-100"></div>
                                 <div class="border-btm-m2 w-100"></div>
@@ -427,9 +477,12 @@
 
         <!--================================================== TIMELINE SEC-6 =====================================================-->
         <section class="section6 position-relative overflow-hidden" id="roadmap">
-            <div class="w-100 z-2 d-none d-lg-block overflow-hidden">
-                <img src="./assets/images/png/timeline.png" alt="random image" class="bg-pos-img-stock">
+
+            <div class="w-100 d-none d-lg-block overflow-hidden">
+                <img src="./assets/images/png/timeline.png" alt="random image"
+                    class="bg-pos-img-stock z-2 position-absolute">
             </div>
+
             <div class="container_stock">
                 <h2 class="roadmap-h fw-600 fs-12xl lh-150 ff-manr color-f1 mx-auto text-center position-relative z-2">
                     Roadmap</h2>
@@ -459,50 +512,52 @@
                                 class="phase-cnt position-absolute d-none d-xl-block">
                         </div>
                     </div>
+
                     <div class="col-lg-4 col-sm-6 col-12 mt-media-second-col position-relative z-3 mt-4 mt-sm-0">
                         <div class="phase-content position-relative">
                             <h2 class="fw-500 fs-6xl lh-150 white-color ff-manr">Phase 2</h2>
                             <div class="d-flex align-items-start flex-column justify-content-center">
                                 <ul class="ul-list mt-3">
-                                    <li class="mb-0 list-style fw-500 fs-md lh-150 ff-manr color-c1">Team Recruitment
+                                    <li class="mb-0 list-style fw-500 fs-md lh-150 ff-manr color-c1">Official Launch
                                     </li>
-                                    <li class="mb-0 list-style fw-500 fs-md lh-150 ff-manr color-c1 mt-2">Social Media
+                                    <li class="mb-0 list-style fw-500 fs-md lh-150 ff-manr color-c1 mt-2">Burns 5%
                                     </li>
-                                    <li class="mb-0 list-style fw-500 fs-md lh-150 ff-manr color-c1 mt-2">Audit Smart
-                                        Contract</li>
-                                    <li class="mb-0 list-style fw-500 fs-md lh-150 ff-manr color-c1 mt-2">Whitepaper
+                                    <li class="mb-0 list-style fw-500 fs-md lh-150 ff-manr color-c1 mt-2">Major DEX &
+                                        CEX Listings</li>
+                                    <li class="mb-0 list-style fw-500 fs-md lh-150 ff-manr color-c1 mt-2">Coinmarketcap
                                     </li>
-                                    <li class="mb-0 list-style fw-500 fs-md lh-150 ff-manr color-c1 mt-2">Presale Launch
+                                    <li class="mb-0 list-style fw-500 fs-md lh-150 ff-manr color-c1 mt-2">CoinGecko
                                     </li>
-                                    <li class="mb-0 list-style fw-500 fs-md lh-150 ff-manr color-c1 mt-2">Community
-                                        Growth</li>
-                                    <li class="mb-0 list-style fw-500 fs-md lh-150 ff-manr color-c1 mt-2">AI Avatars
-                                        Release</li>
+                                    <li class="mb-0 list-style fw-500 fs-md lh-150 ff-manr color-c1 mt-2">Influencers
+                                        Marketing</li>
+                                    <li class="mb-0 list-style fw-500 fs-md lh-150 ff-manr color-c1 mt-2">More AI
+                                        Avatars Release</li>
                                 </ul>
                             </div>
                             <img src="./assets/images/png/phase-cntn.png" alt="phase-content"
                                 class="phase-cnt position-absolute d-none d-xl-block">
                         </div>
                     </div>
+
                     <div class="col-lg-4 col-sm-6 col-12 position-relative z-3 mt-4 mt-lg-0">
                         <div class="phase-content position-relative">
                             <h2 class="fw-500 fs-6xl lh-150 white-color ff-manr">Phase 3</h2>
                             <div class="d-flex align-items-start flex-column justify-content-center">
                                 <ul class="ul-list mt-3">
-                                    <li class="mb-0 list-style fw-500 fs-md lh-150 ff-manr color-c1">Team Recruitment
+                                    <li class="mb-0 list-style fw-500 fs-md lh-150 ff-manr color-c1">Burns (5%
+                                        quarterly)
                                     </li>
-                                    <li class="mb-0 list-style fw-500 fs-md lh-150 ff-manr color-c1 mt-2">Social Media
+                                    <li class="mb-0 list-style fw-500 fs-md lh-150 ff-manr color-c1 mt-2">Rewards
+                                        Program
                                     </li>
-                                    <li class="mb-0 list-style fw-500 fs-md lh-150 ff-manr color-c1 mt-2">Audit Smart
-                                        Contract</li>
-                                    <li class="mb-0 list-style fw-500 fs-md lh-150 ff-manr color-c1 mt-2">Whitepaper
+                                    <li class="mb-0 list-style fw-500 fs-md lh-150 ff-manr color-c1 mt-2">Multiple
+                                        Partnerships</li>
+                                    <li class="mb-0 list-style fw-500 fs-md lh-150 ff-manr color-c1 mt-2">Create your
+                                        own AI Avatar Voiceover.
                                     </li>
-                                    <li class="mb-0 list-style fw-500 fs-md lh-150 ff-manr color-c1 mt-2">Presale Launch
+                                    <li class="mb-0 list-style fw-500 fs-md lh-150 ff-manr color-c1 mt-2">AI Metaverse
+                                        Avatar Play-to-Earn
                                     </li>
-                                    <li class="mb-0 list-style fw-500 fs-md lh-150 ff-manr color-c1 mt-2">Community
-                                        Growth</li>
-                                    <li class="mb-0 list-style fw-500 fs-md lh-150 ff-manr color-c1 mt-2">AI Avatars
-                                        Release</li>
                                 </ul>
                             </div>
 
@@ -731,6 +786,15 @@
             class="footer-bottom position-absolute w-100 z-2">
         <img src="./assets/images/png/left1-elli.png" alt="left1-elli" class="footer-left position-absolute">
     </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+        integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"

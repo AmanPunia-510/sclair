@@ -96,3 +96,98 @@ document.querySelector(".copy-btn").addEventListener("click", function () {
 
   alert("Text copied to clipboard: " + copyText);
 });
+
+// ===================================== TIMER ========================================//
+
+function getTime() {
+  // Get the values from each div
+  const days = document.getElementById("days").textContent;
+  const hours = document.getElementById("hours").textContent;
+  const mins = document.getElementById("mins").textContent;
+  const secs = document.getElementById("secs").textContent;
+
+  // Combine the values into a single time format
+  const combinedTime = `${days}:${hours}:${mins}:${secs}`;
+
+  // Display the combined time in the "combined-time" div
+  document.getElementById("combined-time").textContent = combinedTime;
+}
+
+// Function to start a countdown
+function startCountdown() {
+  const daysDiv = document.getElementById("days");
+  const hoursDiv = document.getElementById("hours");
+  const minsDiv = document.getElementById("mins");
+  const secsDiv = document.getElementById("secs");
+
+  // Function to update the countdown every second
+  function updateCountdown() {
+    let days = parseInt(daysDiv.textContent);
+    let hours = parseInt(hoursDiv.textContent);
+    let mins = parseInt(minsDiv.textContent);
+    let secs = parseInt(secsDiv.textContent);
+
+    // Decrease the seconds
+    if (secs > 0) {
+      secs -= 1;
+    } else {
+      secs = 59;
+      if (mins > 0) {
+        mins -= 1;
+      } else {
+        mins = 59;
+        if (hours > 0) {
+          hours -= 1;
+        } else {
+          hours = 23;
+          if (days > 0) {
+            days -= 1;
+          } else {
+            // Stop the countdown if time is up
+            clearInterval(countdownInterval);
+          }
+        }
+      }
+    }
+
+    // Update the HTML elements
+    daysDiv.textContent = days.toString().padStart(2, "0");
+    hoursDiv.textContent = hours.toString().padStart(2, "0");
+    minsDiv.textContent = mins.toString().padStart(2, "0");
+    secsDiv.textContent = secs.toString().padStart(2, "0");
+
+    // Update the combined time display
+    getTime();
+  }
+
+  // Update the countdown every second
+  const countdownInterval = setInterval(updateCountdown, 1000);
+}
+
+// Initial call to display the combined time
+getTime();
+
+// Start the countdown
+startCountdown();
+
+// ===================================== SLIDER ========================================//
+
+$(".my-slider").slick({
+  arrows: false,
+  dots: false,
+  infinite: true,
+  variableWidth: true,
+  autoplay: true,
+  autoplaySpeed: 0,
+  speed: 4000,
+  pauseOnHover: true,
+  cssEase: "linear",
+});
+
+// ===================================== PRELOADER ========================================//
+
+const preloader = document.querySelector(".preloader");
+
+setTimeout(() => {
+  preloader.classList.add("d-none");
+}, 3000);
