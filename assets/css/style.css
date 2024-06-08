@@ -110,6 +110,10 @@
   z-index: 2;
 }
 
+.z-3 {
+  z-index: 3;
+}
+
 /* ======================================================== HEADER ========================================================== */
 
 .header {
@@ -747,6 +751,7 @@
   height: 38px;
   border-radius: 50%;
   border: 1px solid #595959;
+  transition: all 200ms linear;
 }
 
 .eglu {
@@ -782,7 +787,8 @@
 
 .footer-items {
   border-bottom: 1px solid #353407;
-  overflow-x: scroll;
+  gap: 32px;
+  flex-wrap: wrap;
 }
 
 /* ============================================================= HOVER ============================================================= */
@@ -795,6 +801,10 @@
 .footer-list a:hover {
   color: var(--white-color);
   -webkit-text-stroke: medium;
+}
+
+.common-icon:hover {
+  box-shadow: 0px 0px 10px var(--white-color);
 }
 
 /* ============================================================= ELLIPS ============================================================= */
@@ -842,7 +852,7 @@
 
 .footer-left {
   left: 0;
-  top: -229px;
+  top: 0;
   z-index: 1;
 }
 
@@ -1056,6 +1066,12 @@
   .sinclair-card {
     padding: 12px;
   }
+
+  .footer-items {
+  border-bottom: 1px solid #353407;
+  gap: 12px;
+  flex-wrap: wrap;
+}
 }
 
 /* ======================================================== MIN-WIDTH :576 ========================================================== */
