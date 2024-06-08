@@ -92,6 +92,52 @@ ul {
 
   --nav-bg: #f1f1f105;
   --nav-brdr: #f1f1f129;
+  --sold-sec: #ffffff05;
+  --sold-bg: linear-gradient(
+    123.75deg,
+    rgba(255, 255, 255, 0.2) 11.04%,
+    rgba(255, 255, 255, 0.02) 87.64%
+  );
+  --clair-box: linear-gradient(
+    180deg,
+    rgba(255, 246, 36, 0.0222222) 0%,
+    #fff624 55%,
+    rgba(255, 246, 36, 0) 100%
+  );
+  --common-svg: #313131;
+  --time-box: #fff62433;
+  --dot: #87855b;
+  --copy-btn: #ffffff3d;
+  --copy-bg: #ffffff14;
+  --btn-shadow: #b8ec68;
+  --btn-hover: #414040;
+  --sinclair: #fff6243d;
+  --sinclair-bg: #ffffff0a;
+  --sin-card: #ffffff0f;
+  --sin-lg: linear-gradient(
+    96.24deg,
+    rgba(241, 241, 241, 0.24) -31.57%,
+    rgba(241, 241, 241, 0) 125.48%
+  );
+
+  --major: #ffffff14;
+  --major-gr: linear-gradient(
+    150.17deg,
+    rgba(255, 246, 36, 0.4) -60.4%,
+    rgba(255, 246, 36, 0) 118.96%
+  );
+
+  --social-card: linear-gradient(
+    107.74deg,
+    rgba(255, 246, 36, 0.27) -16.6%,
+    rgba(255, 246, 36, 0) 134.64%
+  );
+
+  --border-btm: #53511b;
+  --phase-brdr: #5A5718;
+  --phase-bg: #1a1a14;
+  --common-icon: #595959;
+  --footer: #353407;
 }
 
 .ff-manr {
