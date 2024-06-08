@@ -290,7 +290,9 @@ ul {
   :root {
     --fs-12xl: 26px;
     --fs-10xl: 30px;
+    --fs-9xl: 30px;
     --fs-xl: 17px;
     --fs-lg: 16px;
+    --fs-17xl: 48px;
   }
 }

@@ -1,18 +1,3 @@
-$(".slider").slick({
-  arrows: false,
-  dots: false,
-  infinite: true,
-  slidesToShow: 4,
-  slidesToScroll: 1,
-  variableWidth: true,
-  slidesToShow: 6,
-  autoplay: true,
-  autoplaySpeed: 0,
-  speed: 2000,
-  pauseOnHover: true,
-  cssEase: "linear",
-});
-
 // ===================================== navbar ========================================//
 
 const item = document.querySelector(".navbar-items");
@@ -37,47 +22,24 @@ menu.addEventListener("click", () => {
 
 // ===================================== RANGe ========================================//
 
-// var slider = document.getElementById("range-slider__range");
-// var output = document.getElementById("range-slider__value");
-
-// output.innerHTML = slider.value;
-
-// // This function input current value in span and add progress colour in range
-// slider.oninput = function () {
-//   output.innerHTML = this.value;
-
-//   var value = ((this.value - this.min) / (this.max - this.min)) * 100;
-
-//   this.style.background =
-//     "linear-gradient(to right, #FEF538 0%, #FEF538 " +
-//     value +
-//     "%, #d7dcdf " +
-//     value +
-//     "%, #d7dcdf 100%)";
-// };
-
 var slider = document.getElementById("range-slider__range");
 var output = document.getElementById("range-slider__value");
 
 output.innerHTML = slider.value;
 
-function updateSliderBackground() {
-  var value = ((slider.value - slider.min) / (slider.max - slider.min)) * 100;
-  slider.style.background =
+// This function input current value in span and add progress colour in range
+slider.oninput = function () {
+  output.innerHTML = this.value;
+
+  var value = ((this.value - this.min) / (this.max - this.min)) * 100;
+
+  this.style.background =
     "linear-gradient(to right, #FEF538 0%, #FEF538 " +
     value +
     "%, #d7dcdf " +
     value +
     "%, #d7dcdf 100%)";
-}
-
-slider.addEventListener("input", function () {
-  output.innerHTML = this.value;
-  updateSliderBackground();
-});
-
-// Initialize the slider background on page load
-updateSliderBackground();
+};
 
 // ==================================== ACCORDIAN =======================================//
 
@@ -127,14 +89,3 @@ document.querySelector(".copy-btn").addEventListener("click", function () {
 
   alert("Text copied to clipboard: " + copyText);
 });
-
-// Get the range slider and value span elements
-const rangeSlider = document.getElementById("range-slider__range");
-
-// Calculate the midpoint (50% of the range)
-const min = parseInt(rangeSlider.min);
-const max = parseInt(rangeSlider.max);
-const midpoint = (min + max) / 2;
-
-// Set the slider value to the midpoint
-rangeSlider.value = midpoint;
